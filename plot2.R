@@ -19,7 +19,7 @@ data <- read.csv.sql("household_power_consumption.txt", sql = "select * from fil
 data$Date_Time <- strptime(paste(data$Date, data$Time), format = "%d/%m/%Y %H:%M:%S")
 
 ## set the output format and size
-png("plot2.png", width = 504, height = 504, units = "px")
+png("plot2.png", width = 504, height = 504, units = "px", bg = "transparent")
 
 ## generate the graph
 plot(data$Date_Time, data$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")

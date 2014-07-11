@@ -16,7 +16,7 @@ library(sqldf)
 data <- read.csv.sql("household_power_consumption.txt", sql = "select * from file where Date = '1/2/2007' OR Date = '2/2/2007'", header = TRUE, sep = ";")
 
 ## set the output format and size
-png("plot1.png", width = 504, height = 504, units = "px")
+png("plot1.png", width = 504, height = 504, units = "px", bg = "transparent")
 
 ## generate the graph
 hist(data$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
